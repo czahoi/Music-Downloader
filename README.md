@@ -65,9 +65,9 @@
 
 # 🎉 What's New
 
-- 2026-05-13: Released musicdl v2.11.7 — fix some broken third-party APIs for TIDAL, Qobuz, Deezer, YouTube, and Spotify, and add multiple new parsing APIs that include VIP accounts.
-- 2026-05-11: Released musicdl v2.11.6 — added support for Bodian Music, including search, download, and playlist parsing features; fixed multiple lossless music API endpoints; added several new lossless music API endpoints; Tidal now downloads in FLAC format by default.
-- 2026-05-09: Released musicdl v2.11.5 — added support for music search and downloads from OpenGameArt ("opengameart.org"), along with multiple VIP account APIs for QQ Music, Kuwo Music, and NetEase Cloud Music.
+- 2026-09-05: Released musicdl v2.13.10 — perform routine checks and maintenance on the Audius, ccMixter, FMA, JOOX, MOOV, SoundCloud, Spotify, and YouTube music clients to ensure that all their interfaces remain valid.
+- 2026-09-02: Released musicdl v2.13.9 — performed routine checks and maintenance on the Audius, ccMixter, FMA, JOOX, SoundCloud, Suno, and YouTube music clients; since YouTube's native API had become completely unusable, the YouTube client was fully refactored, with a large amount of unnecessary code removed.
+- 2026-08-31: Released musicdl v2.13.8 — routine maintenance for Bilibili, Bodian, FiveSing, Jamendo, JioSaavn, Kugou, Kuwo, Migu, NetEase, OpenGameArt, Qianqian, QQ, StreetVoice, and Wikimedia Commons music clients.
 
 
 # 🎵 Introduction
@@ -97,12 +97,15 @@ If you are a copyright or rights holder and believe that this repository infring
 |                                          | [KugouMusicClient](http://www.kugou.com/)                          | [酷狗音乐](http://www.kugou.com/)                                            | ✅        | ✅         | [kugou.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/kugou.py)                         |
 |                                          | [KuwoMusicClient](http://www.kuwo.cn/)                             | [酷我音乐](http://www.kuwo.cn/)                                              | ✅        | ✅         | [kuwo.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/kuwo.py)                           |
 |                                          | [MiguMusicClient](https://music.migu.cn/v5/#/musicLibrary)         | [咪咕音乐](https://music.migu.cn/v5/#/musicLibrary)                          | ✅        | ✅         | [migu.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/migu.py)                           |
+|                                          | [MOOVMusicClient](https://moov.hk/)                                | [摩音符](https://moov.hk/)                                                   | ✅        | ✅         | [moov.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/moov.py)                           |
 |                                          | [NeteaseMusicClient](https://music.163.com/)                       | [网易云音乐](https://music.163.com/)                                         | ✅        | ✅         | [netease.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/netease.py)                     |
 |                                          | [QianqianMusicClient](http://music.taihe.com/)                     | [千千音乐](http://music.taihe.com/)                                          | ✅        | ✅         | [qianqian.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/qianqian.py)                   |
 |                                          | [QQMusicClient](https://y.qq.com/)                                 | [QQ音乐](https://y.qq.com/)                                                  | ✅        | ✅         | [qq.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/qq.py)                               |
 |                                          | [SodaMusicClient](https://www.douyin.com/qishui/)                  | [汽水音乐](https://www.douyin.com/qishui/)                                   | ✅        | ✅         | [soda.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/soda.py)                           |
 |                                          | [StreetVoiceMusicClient](https://www.streetvoice.cn/)              | [街声](https://www.streetvoice.cn/)                                          | ✅        | ✅         | [streetvoice.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/streetvoice.py)             |
 | **Global Streaming / Indie**             | [AppleMusicClient](https://music.apple.com/)                       | [苹果音乐](https://music.apple.com/)                                         | ✅        | ✅         | [apple.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/apple.py)                         |
+|                                          | [AudiusMusicClient](https://audius.co/)                            | [Audius音乐平台](https://audius.co/)                                         | ✅        | ✅         | [audius.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/audius.py)                       |
+|                                          | [CCMixterMusicClient](https://ccmixter.org/)                       | [ccMixter (混音社区)](https://ccmixter.org/)                                 | ✅        | ✅         | [ccmixter.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/ccmixter.py)                   |
 |                                          | [DeezerMusicClient](https://www.deezer.com/us/)                    | [Deezer (法国音乐平台)](https://www.deezer.com/us/)                          | ✅        | ✅         | [deezer.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/deezer.py)                       |
 |                                          | [FMAMusicClient](https://freemusicarchive.org/)                    | [FMA (自由音乐网)](https://freemusicarchive.org/)                            | ✅        | ✅         | [fma.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/fma.py)                             |
 |                                          | [JamendoMusicClient](https://www.jamendo.com/)                     | [简音乐 (欧美流行音乐)](https://www.jamendo.com/)                            | ✅        | ✅         | [jamendo.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/jamendo.py)                     |
@@ -112,7 +115,9 @@ If you are a copyright or rights holder and believe that this repository infring
 |                                          | [QobuzMusicClient](https://play.qobuz.com/discover)                | [Qobuz (提供CD质量的流媒体平台)](https://play.qobuz.com/discover)            | ✅        | ✅         | [qobuz.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/qobuz.py)                         |
 |                                          | [SoundCloudMusicClient](https://soundcloud.com/discover)           | [SoundCloud (声云)](https://soundcloud.com/discover)                         | ✅        | ✅         | [soundcloud.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/soundcloud.py)               |
 |                                          | [SpotifyMusicClient](https://open.spotify.com/)                    | [Spotify (思播)](https://open.spotify.com/)                                  | ✅        | ✅         | [spotify.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/spotify.py)                     |
+|                                          | [SunoMusicClient](https://suno.com/discover)                       | [Suno (AI音乐生成网站)](https://suno.com/discover)                           | ✅        | ✅         | [suno.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/suno.py)                           |
 |                                          | [TIDALMusicClient](https://tidal.com/)                             | [TIDAL (提供HiFi音质的流媒体平台)](https://tidal.com/)                       | ✅        | ✅         | [tidal.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/tidal.py)                         |
+|                                          | [WikimediaCommonsMusicClient](https://commons.wikimedia.org/)      | [维基共享资源(音频)](https://commons.wikimedia.org/)                         | ✅        | ✅         | [wikimediacommons.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/wikimediacommons.py)   |
 |                                          | [YouTubeMusicClient](https://music.youtube.com/)                   | [油管音乐](https://music.youtube.com/)                                       | ✅        | ✅         | [youtube.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/sources/youtube.py)                     |
 | **Audio / Radio**                        | [ITunesMusicClient](https://www.apple.com/itunes/)                 | [苹果播客](https://www.apple.com/itunes/)                                    | ✅        | ✅         | [itunes.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/audiobooks/itunes.py)                    |
 |                                          | [LizhiMusicClient](https://www.lizhi.fm/)                          | [荔枝FM](https://www.lizhi.fm/)                                              | ✅        | ✅         | [lizhi.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/audiobooks/lizhi.py)                      |
@@ -124,37 +129,42 @@ If you are a copyright or rights holder and believe that this repository infring
 |                                          | [MP3JuiceMusicClient](https://mp3juice.co/)                        | [MP3 Juice (SoundCloud+YouTube音乐源)](https://mp3juice.co/)                 | ✅        | ✅         | [mp3juice.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/common/mp3juice.py)                    |
 |                                          | [MyFreeMP3MusicClient](https://www.myfreemp3.com.cn/)              | [MyFreeMP3 (网易云+夸克音乐源)](https://www.myfreemp3.com.cn/)               | ✅        | ✅         | [myfreemp3.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/common/myfreemp3.py)                  |
 |                                          | [TuneHubMusicClient](https://tunehub.sayqz.com/docs)               | [TuneHub音乐 (QQ网易云酷我音乐源)](https://tunehub.sayqz.com/docs)           | ✅        | ✅         | [tunehub.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/common/tunehub.py)                      |
-|                                          | [WJHEMusicClient](https://music.wjhe.top/)                         | [HEMusic (Qobuz咪咕JOOX无损音源)](https://music.wjhe.top/)                   | ✅        | ✅         | [wjhe.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/common/wjhe.py)                            |
+|                                          | [XiaoBaiMusicClient](https://music.90svip.cn/)                     | [小白音乐 (QQ网易云酷我酷狗音乐源)](https://music.90svip.cn/)                | ✅        | ✅         | [xiaobai.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/common/xiaobai.py)                      |
 | **Unofficial Download Sites / Scrapers** | [BuguyyMusicClient](https://buguyy.top/)                           | [布谷音乐](https://buguyy.top/)                                              | ✅        | ✅         | [buguyy.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/buguyy.py)               |
 |                                          | [FangpiMusicClient](https://www.fangpi.net/)                       | [放屁音乐](https://www.fangpi.net/)                                          | ✅        | ✅         | [fangpi.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/fangpi.py)               |
 |                                          | [FiveSongMusicClient](https://www.5song.xyz/index.html)            | [5Song无损音乐](https://www.5song.xyz/index.html)                            | ✅        | ✅         | [fivesong.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/fivesong.py)           |
-|                                          | [FLMP3MusicClient](https://www.flmp3.pro/index.html)               | [凤梨音乐](https://www.flmp3.pro/index.html)                                 | ✅        | ✅         | [flmp3.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/flmp3.py)                 |
 |                                          | [GequbaoMusicClient](https://www.gequbao.com/)                     | [歌曲宝](https://www.gequbao.com/)                                           | ✅        | ✅         | [gequbao.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/gequbao.py)             |
 |                                          | [GequhaiMusicClient](https://www.gequhai.com/)                     | [歌曲海](https://www.gequhai.com/)                                           | ✅        | ✅         | [gequhai.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/gequhai.py)             |
 |                                          | [HTQYYMusicClient](http://www.htqyy.com/)                          | [好听轻音乐网](http://www.htqyy.com/)                                        | ✅        | ✅         | [htqyy.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/htqyy.py)                 |
-|                                          | [JCPOOMusicClient](https://www.jcpoo.cn/)                          | [九册音乐网](https://www.jcpoo.cn/)                                          | ✅        | ✅         | [jcpoo.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/jcpoo.py)                 |
+|                                          | [ITingWaMusicClient](https://www.itingwa.com/)                     | [听蛙纯音乐网](https://www.itingwa.com/)                                     | ✅        | ✅         | [itingwa.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/itingwa.py)             |
 |                                          | [KKWSMusicClient](https://www.kkws.cc/)                            | [开开无损音乐](https://www.kkws.cc/)                                         | ✅        | ✅         | [kkws.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/kkws.py)                   |
 |                                          | [LivePOOMusicClient](https://www.livepoo.cn/)                      | [力音](https://www.livepoo.cn/)                                              | ✅        | ✅         | [livepoo.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/livepoo.py)             |
+|                                          | [LiziYYMusicClient](https://liziyy.top/)                           | [梨子音乐](https://liziyy.top/)                                              | ✅        | ✅         | [liziyy.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/liziyy.py)               |
 |                                          | [MituMusicClient](https://www.qqmp3.vip/)                          | [米兔音乐](https://www.qqmp3.vip/)                                           | ✅        | ✅         | [mitu.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/mitu.py)                   |
+|                                          | [MGMP3MusicClient](https://www.mgmp3.top/)                         | [木瓜音乐](https://www.mgmp3.top/)                                           | ✅        | ✅         | [mgmp3.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/mgmp3.py)                 |
+|                                          | [SgogoMusicClient](https://www.sgogo.com/)                         | [搜歌网](https://www.sgogo.com/)                                             | ✅        | ✅         | [sgogo.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/sgogo.py)                 |
 |                                          | [TwoT58MusicClient](https://www.2t58.com/)                         | [爱听音乐网](https://www.2t58.com/)                                          | ✅        | ✅         | [twot58.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/twot58.py)               |
+|                                          | [XiagebaMusicClient](https://xiageba.liumingye.cn/)                | [下歌吧](https://xiageba.liumingye.cn/)                                      | ✅        | ✅         | [xiageba.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/xiageba.py)             |
+|                                          | [XMFWAVMusicClient](https://www.xmfwav.com/)                       | [小蜜蜂音乐网](https://www.xmfwav.com/)                                      | ✅        | ✅         | [xmfwav.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/xmfwav.py)               |
 |                                          | [YinyuedaoMusicClient](https://1mp3.top/)                          | [音乐岛](https://1mp3.top/)                                                  | ✅        | ✅         | [yinyuedao.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/yinyuedao.py)         |
-|                                          | [ZhuolinMusicClient](https://music.zhuolin.wang/)                  | [音乐解析下载网](https://music.zhuolin.wang/)                                | ✅        | ✅         | [zhuolin.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/zhuolin.py)             |
+|                                          | [YinyuekuMusicClient](http://yinyueku.cn/)                         | [音乐库](http://yinyueku.cn/)                                                | ✅        | ✅         | [yinyueku.py](https://github.com/CharlesPikachu/musicdl/blob/master/musicdl/modules/thirdpartysites/yinyueku.py)           |
 
 
 # 🧪 Playground
 
 Here are some projects built on top of musicdl,
 
-|  Project (EN)                                  |   Project (CN)          |   WeChat Article                                             |  Project Location                                                                                                |
-|  :----:                                        |   :----:                |   :----:                                                     |  :----:                                                                                                          |
-|  Music downloader GUI                          |   音乐下载器GUI界面     |   [click](https://mp.weixin.qq.com/s/fN1ORyI6lzQFqxf6Zk1oIg) |  [musicdlgui](https://github.com/CharlesPikachu/musicdl/tree/master/examples/musicdlgui)                         |
-|  Singer lyrics analysis                        |   歌手歌词分析          |   [click](https://mp.weixin.qq.com/s/I8Dy7CoM2ThnSpjoUaPtig) |  [singerlyricsanalysis](https://github.com/CharlesPikachu/musicdl/tree/master/examples/singerlyricsanalysis)     |
-|  Lyric-based song snippet retrieval            |   歌词获取歌曲片段      |   [click](https://mp.weixin.qq.com/s/Vmc1IhuhMJ6C5vBwBe43Pg) |  [searchlyrics](https://github.com/CharlesPikachu/musicdl/tree/master/examples/searchlyrics)                     |
+|  Project (EN)                                  |   Project (CN)                        |   WeChat Article                                             |  Project Location                                                                                                                      |
+|  :----:                                        |   :----:                              |   :----:                                                     |  :----:                                                                                                                                |
+|  Modern Web Music Player (Claude.ai)           |   现代化Web音乐播放器 (Claude.ai)     |   [click](https://mp.weixin.qq.com/s/fN1ORyI6lzQFqxf6Zk1oIg) |  [claudeai-modern-web-music-player](https://github.com/CharlesPikachu/musicdl/tree/master/examples/claudeai-modern-web-music-player)   |
+|  Music downloader GUI                          |   音乐下载器GUI界面                   |   [click](https://mp.weixin.qq.com/s/fN1ORyI6lzQFqxf6Zk1oIg) |  [musicdlgui](https://github.com/CharlesPikachu/musicdl/tree/master/examples/musicdlgui)                                               |
+|  Singer lyrics analysis                        |   歌手歌词分析                        |   [click](https://mp.weixin.qq.com/s/I8Dy7CoM2ThnSpjoUaPtig) |  [singerlyricsanalysis](https://github.com/CharlesPikachu/musicdl/tree/master/examples/singerlyricsanalysis)                           |
+|  Lyric-based song snippet retrieval            |   歌词获取歌曲片段                    |   [click](https://mp.weixin.qq.com/s/Vmc1IhuhMJ6C5vBwBe43Pg) |  [searchlyrics](https://github.com/CharlesPikachu/musicdl/tree/master/examples/searchlyrics)                                           |
 
-For example, the Music Downloader GUI looks/works like this,
+For example, the Modern Web Music Player (Claude.ai) looks/works like this,
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/CharlesPikachu/musicdl/master/examples/musicdlgui/screenshot.png" width="600" alt="musicdl logo" />
+  <img src="https://raw.githubusercontent.com/CharlesPikachu/musicdl/master/examples/claudeai-modern-web-music-player/screenshot.png" width="600" alt="musicdl logo" />
 </div>
 
 
@@ -180,6 +190,7 @@ Certain music clients supported by musicdl require extra CLI tools to function c
   Required By:
 
   - [AppleMusicClient](https://music.apple.com/)
+  - [MOOVMusicClient](https://moov.hk/)
   - [SoundCloudMusicClient](https://soundcloud.com/discover)
   - [StreetVoiceMusicClient](https://www.streetvoice.cn/)
   - [TIDALMusicClient](https://tidal.com/)
@@ -224,6 +235,7 @@ Certain music clients supported by musicdl require extra CLI tools to function c
   Required By:
   
   - [AppleMusicClient](https://music.apple.com/)
+  - [MOOVMusicClient](https://moov.hk/)
   - [SoundCloudMusicClient](https://soundcloud.com/discover)
   - [TIDALMusicClient](https://tidal.com/)
   
@@ -247,6 +259,7 @@ Certain music clients supported by musicdl require extra CLI tools to function c
   Required By:
   
   - [AppleMusicClient](https://music.apple.com/)
+  - [MOOVMusicClient](https://moov.hk/)
   - [SoundCloudMusicClient](https://soundcloud.com/discover)
   - [TIDALMusicClient](https://tidal.com/)
   
@@ -698,6 +711,7 @@ AppleMusicClient,      DeezerMusicClient,       FiveSingMusicClient,    JamendoM
 KuwoMusicClient,       KugouMusicClient,        MiguMusicClient,        NeteaseMusicClient,      QQMusicClient,
 QianqianMusicClient,   QobuzMusicClient,        SoundCloudMusicClient,  StreetVoiceMusicClient,  SodaMusicClient,
 SpotifyMusicClient,    TIDALMusicClient,        FMAMusicClient,         JioSaavnMusicClient,     BodianMusicClient,
+SunoMusicClient,       MOOVMusicClient,         AudiusMusicClient,      CCMixterMusicClient,
 ```
 
 You can download a supported playlist directly from the terminal:
@@ -708,8 +722,12 @@ You can download a supported playlist directly from the terminal:
 musicdl -p "https://music.apple.com/cn/playlist/%E5%8D%81%E5%A4%A7%E4%B8%93%E8%BE%91/pl.u-mJy81mECzBL49zM" -m AppleMusicClient -i "{'AppleMusicClient': {'default_parse_cookies': your_vip_cookies_with_str_or_dict_format}}"
 # >>> use wrapper
 musicdl -p "https://music.apple.com/cn/playlist/%E5%8D%81%E5%A4%A7%E4%B8%93%E8%BE%91/pl.u-mJy81mECzBL49zM" -m AppleMusicClient -i "{'AppleMusicClient': {'use_wrapper': True, 'wrapper_account_url': 'http://127.0.0.1:30020/', 'wrapper_decrypt_ip': '127.0.0.1:10020'}}"
+# Parse and Download Audius Music Playlist
+musicdl -p "https://audius.co/audiusplaylists/playlist/audius-weekly-6044" -m AudiusMusicClient
 # Parse and Download Bodian Music Playlist
-musicdl -p "https://h5app.kuwo.cn/m/bodian/collection.html?uid=1798690&playlistId=1669719&source=5&ownerId=1798690"
+musicdl -p "https://h5app.kuwo.cn/m/bodian/collection.html?uid=1798690&playlistId=1669719&source=5&ownerId=1798690" -m BodianMusicClient
+# Parse and Download ccMixter Music Playlist
+musicdl -p "https://ccmixter.org/playlist/browse/56358" -m CCMixterMusicClient
 # Parse and Download Deezer Music Playlist
 musicdl -p "https://www.deezer.com/us/playlist/4697225044" -m DeezerMusicClient
 # Parse and Download 5SING Music Playlist
@@ -728,6 +746,8 @@ musicdl -p "https://www.kuwo.cn/playlist_detail/2358858706" -m KuwoMusicClient
 musicdl -p "https://www.kugou.com/yy/special/single/3280341.html" -m KugouMusicClient
 # Parse and Download Migu Music Playlist
 musicdl -p "https://music.migu.cn/v5/#/playlist?playlistId=228114498&playlistType=ordinary" -m MiguMusicClient
+# Parse and Download MOOV Music Playlist
+musicdl -p "https://moov.hk/?utm_source=ios&utm_medium=copylink&utm_campaign=sharing_UPL-6742190#/playlist/PP1000000965" -m MOOVMusicClient -i "{'MOOVMusicClient': {'default_parse_cookies': your_vip_cookies_with_str_or_dict_format}}"
 # Parse and Download NetEase Music Playlist
 musicdl -p "https://music.163.com/#/playlist?id=3039971654" -m NeteaseMusicClient
 # Parse and Download QQ Music Playlist
@@ -744,6 +764,8 @@ musicdl -p "https://soundcloud.com/pandadub/sets/the-lost-ship" -m SoundCloudMus
 musicdl -p "https://qishui.douyin.com/s/iHFSgNKw/" -m SodaMusicClient
 # Parse and Download Spotify Music Playlist
 musicdl -p "https://open.spotify.com/playlist/37i9dQZF1E8NWHOpySOxQd" -m SpotifyMusicClient
+# Parse and Download Suno Music Playlist
+musicdl -p "https://suno.com/playlist/71f56f55-93a8-4c93-830d-6762853cc862" -m SunoMusicClient -i "{'SunoMusicClient': {'default_parse_cookies': your_vip_cookies_with_str_or_dict_format}}"
 # Parse and Download TIDAL Music Playlist
 musicdl -p "https://tidal.com/playlist/a94e7dce-da66-413d-81a5-990328afa3c9" -m TIDALMusicClient -i "{'TIDALMusicClient': {'default_parse_cookies': your_vip_cookies_with_str_or_dict_format}}"
 ```
@@ -883,6 +905,7 @@ For more details, please refer to the [official documentation](https://musicdl.r
 | 🖼️ **Paperdl**<br/>轻量级学术论文搜索下载器                | [![Stars](https://img.shields.io/github/stars/CharlesPikachu/paperdl?style=flat-square)](https://github.com/CharlesPikachu/paperdl)                   | [![Version](https://img.shields.io/pypi/v/paperdl)](https://pypi.org/project/paperdl)                      | [![Last Commit](https://img.shields.io/github/last-commit/CharlesPikachu/paperdl?style=flat-square)](https://github.com/CharlesPikachu/paperdl/commits/main)                     | [🛠 Repository](https://github.com/CharlesPikachu/paperdl)           |
 | 🌐 **FreeProxy**<br/>全球海量高质量免费代理采集器          | [![Stars](https://img.shields.io/github/stars/CharlesPikachu/freeproxy?style=flat-square)](https://github.com/CharlesPikachu/freeproxy)               | [![Version](https://img.shields.io/pypi/v/pyfreeproxy)](https://pypi.org/project/pyfreeproxy)              | [![Last Commit](https://img.shields.io/github/last-commit/CharlesPikachu/freeproxy?style=flat-square)](https://github.com/CharlesPikachu/freeproxy/commits/master)               | [🛠 Repository](https://github.com/CharlesPikachu/freeproxy)         |
 | 🌐 **MusicSquare**<br/>简易音乐搜索下载和播放网页          | [![Stars](https://img.shields.io/github/stars/CharlesPikachu/musicsquare?style=flat-square)](https://github.com/CharlesPikachu/musicsquare)           | [![Version](https://img.shields.io/pypi/v/musicdl)](https://pypi.org/project/musicdl)                      | [![Last Commit](https://img.shields.io/github/last-commit/CharlesPikachu/musicsquare?style=flat-square)](https://github.com/CharlesPikachu/musicsquare/commits/main)             | [🛠 Repository](https://github.com/CharlesPikachu/musicsquare)       |
+| 🌐 **ZHIHU://VERSE**<br/>Zhihu CLI 驱动的交互式知乎实验场  | [![Stars](https://img.shields.io/github/stars/CharlesPikachu/zhihu-verse?style=flat-square)](https://github.com/CharlesPikachu/zhihu-verse)           | [![Version](https://img.shields.io/pypi/v/pyzhihu-cli)](https://pypi.org/project/pyzhihu-cli)              | [![Last Commit](https://img.shields.io/github/last-commit/CharlesPikachu/zhihu-verse?style=flat-square)](https://github.com/CharlesPikachu/zhihu-verse/commits/main)             | [🛠 Repository](https://github.com/CharlesPikachu/zhihu-verse)       |
 | 🌐 **FreeGPTHub**<br/>真正免费的GPT统一接口                | [![Stars](https://img.shields.io/github/stars/CharlesPikachu/FreeGPTHub?style=flat-square)](https://github.com/CharlesPikachu/FreeGPTHub)             | [![Version](https://img.shields.io/pypi/v/freegpthub)](https://pypi.org/project/freegpthub)                | [![Last Commit](https://img.shields.io/github/last-commit/CharlesPikachu/FreeGPTHub?style=flat-square)](https://github.com/CharlesPikachu/FreeGPTHub/commits/main)               | [🛠 Repository](https://github.com/CharlesPikachu/FreeGPTHub)        |
 
 
@@ -904,7 +927,13 @@ If you use this project in your research, please cite the repository.
 
 # 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=CharlesPikachu/musicdl&type=date&legend=top-left)](https://www.star-history.com/#CharlesPikachu/musicdl&type=date&legend=top-left)
+<a href="https://www.star-history.com/?repos=CharlesPikachu%2Fmusicdl&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=CharlesPikachu/musicdl&type=date&theme=dark&legend=top-left&sealed_token=JEeexjndxWne-Z59JgGSPycgRXy-qMfcbkWrJPLUwQ9SGspx0WVAS0Njsc0uUK5JFIjNwqi-u7Zut2LEXgbXLpoLU7vzk0hqUQ9EAnJ3uN2Eu6XEjQFzng" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=CharlesPikachu/musicdl&type=date&legend=top-left&sealed_token=JEeexjndxWne-Z59JgGSPycgRXy-qMfcbkWrJPLUwQ9SGspx0WVAS0Njsc0uUK5JFIjNwqi-u7Zut2LEXgbXLpoLU7vzk0hqUQ9EAnJ3uN2Eu6XEjQFzng" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=CharlesPikachu/musicdl&type=date&legend=top-left&sealed_token=JEeexjndxWne-Z59JgGSPycgRXy-qMfcbkWrJPLUwQ9SGspx0WVAS0Njsc0uUK5JFIjNwqi-u7Zut2LEXgbXLpoLU7vzk0hqUQ9EAnJ3uN2Eu6XEjQFzng" />
+ </picture>
+</a>
 
 
 # ☕ Appreciation (赞赏 / 打赏)

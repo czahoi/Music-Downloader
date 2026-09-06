@@ -1,5 +1,53 @@
 # Release Log
 
+- 2026-09-05: Released musicdl v2.13.10 — perform routine checks and maintenance on the Audius, ccMixter, FMA, JOOX, MOOV, SoundCloud, Spotify, and YouTube music clients to ensure that all their interfaces remain valid.
+
+- 2026-09-02: Released musicdl v2.13.9 — performed routine checks and maintenance on the Audius, ccMixter, FMA, JOOX, SoundCloud, Suno, and YouTube music clients; since YouTube's native API had become completely unusable, the YouTube client was fully refactored, with a large amount of unnecessary code removed.
+
+- 2026-08-31: Released musicdl v2.13.8 — routine maintenance for Bilibili, Bodian, FiveSing, Jamendo, JioSaavn, Kugou, Kuwo, Migu, NetEase, OpenGameArt, Qianqian, QQ, StreetVoice, and Wikimedia Commons music clients.
+
+- 2026-08-30: Released musicdl v2.13.7 — fix all broken audiobook clients; thoroughly test and inspect all third-party music clients and common music clients, and properly handle any clients that are no longer working.
+
+- 2026-08-10: Released musicdl v2.13.6 — perform routine updates and maintenance for the common music clients, this update fixes two common music clients.
+
+- 2026-08-09: Released musicdl v2.13.5 — perform monthly maintenance checks on third-party music clients, fixing numerous bugs and restoring all broken clients; remove the FLMP3 music client and introduce the new XMFWAV music client; add support for three music platforms with clearly copyrighted content.
+
+- 2026-07-26: Released musicdl v2.13.4 — fix potential bugs in playlist parsing for several music clients; add and fix several third-party parsing APIs for the Deezer, Tidal, and Qobuz music clients.
+
+- 2026-07-24: Released musicdl v2.13.3 — fixed bugs in all affected common music clients; addressed potential issues in DeezerMusicClient, QobuzMusicClient, YouTubeMusicClient, JooxMusicClient, BilibiliMusicClient, JamendoMusicClient, JioSaavnMusicClient, FiveSingMusicClient, and SpotifyMusicClient.
+
+- 2026-07-20: Released musicdl v2.13.2 — added support for music search and downloading from multiple third-party music platforms, including liziyy.top, mgmp3.top, itingwa.com, sgogo.com, and xiageba.liumingye.cn; regularly maintained and updated third-party APIs for Kuwo Music, Kugou Music, QQ Music, Qianqian Music, Migu Music, Bodian Music, and NetEase Cloud Music, while also fixing unreasonable behavior in playlist parsing.
+
+- 2026-07-08: Released musicdl v2.13.1 — optimized the unreasonable display of progress; removed all third-party music clients that no longer exist; optimized several third-party APIs; updated some music clients that had become unavailable; added support for configuring cookies in Soda Music to download VIP songs.
+
+- 2026-07-04: Released musicdl v2.13.0 — perform routine maintenance on several commonly used clients.
+
+- 2026-06-24: Released musicdl v2.12.9 — fixed and cleaned up a large number of unavailable third-party interfaces, and added many new parsing interfaces with VIP account support, including QQ Music, Kuwo, TIDAL, Qobuz, and others. Also fixed bugs on platforms such as NetEase Cloud Music.
+
+- 2026-06-21: Released musicdl v2.12.8 — updated third-party API integrations for Deezer, YouTube, Spotify, and Qobuz; fixed the GDStudio music client and upgraded it to the latest API algorithm.
+
+- 2026-06-16: Released musicdl v2.12.7 — fix the freezing issue that occurs when Kugou, Kuwo, QQ Music, and NetEase Cloud Music access third-party APIs (refer to issues #79).
+
+- 2026-06-11: Released musicdl v2.12.6 — consolidate the third-party APIs for QQ, Kuwo, Kugou, and NetEase Cloud Music, and optimize the request mechanism to improve the overall pipeline efficiency.
+
+- 2026-06-01: Released musicdl v2.12.5 — fixed invalid interfaces for QQ Music Client and NetEase Cloud Music Client, and added multiple parsing interfaces with SVIP/VIP/member accounts.
+
+- 2026-05-27: Released musicdl v2.12.4 — optimize the third-party NetEase Cloud Music lossless audio API to avoid returning preview clips; add several lossless music APIs for netease music client.
+
+- 2026-05-25: Released musicdl v2.12.3 — added multiple lossless music APIs; optimized the search interface for common music clients and added message prompts to make the search process feel more natural.
+
+- 2026-05-24: Released musicdl v2.12.2 — added multiple high-quality lossless music sources; fixed all invalid third-party music platforms in the supported list; added progress bars to the search process for all third-party music platforms, making the search experience appear smoother and more natural.
+
+- 2026-05-23: Released musicdl v2.12.1 — for users in mainland China, Kuwo Music song downloads now support higher audio quality; added several member-only interfaces; optimized the search interface for some supported platforms so that it no longer appears frozen while waiting for search results.
+
+- 2026-05-22: Released musicdl v2.12.0 — improved third-party API support across multiple platforms, including VIP-account handling and cookie-free fallback calls; added music search, playlist parsing, and download support for MOOV Music, plus search and downloads for Alger Music.
+
+- 2026-05-16: Released musicdl v2.11.10 — emergency fix for Migu Music becoming invalid issues, ensuring access to at least 320 kbps files and restoring lossless audio via member cookies.
+
+- 2026-05-15: Released musicdl v2.11.9 — optimized some third-party interfaces; added multiple API endpoints with member-quality audio for supported music platforms (kuwo, netease, kugou).
+
+- 2026-05-14: Released musicdl v2.11.8 — added support for music search and downloads from the Suno site, as well as playlist parsing and downloading; added multiple third-party parsing APIs for the Ximalaya and Qobuz platforms.
+
 - 2026-05-13: Released musicdl v2.11.7 — fix some broken third-party APIs for TIDAL, Qobuz, Deezer, YouTube, and Spotify, and add multiple new parsing APIs that include VIP accounts.
 
 - 2026-05-11: Released musicdl v2.11.6 — added support for Bodian Music, including search, download, and playlist parsing features; fixed multiple lossless music API endpoints; added several new lossless music API endpoints; Tidal now downloads in FLAC format by default.

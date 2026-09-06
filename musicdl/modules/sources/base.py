@@ -17,13 +17,35 @@ from threading import Lock
 from rich.text import Text
 from itertools import chain
 from datetime import datetime
-from typing import TYPE_CHECKING
 from collections import defaultdict
 from fake_useragent import UserAgent
 from pathvalidate import sanitize_filepath
+from typing import TYPE_CHECKING, TypedDict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn, DownloadColumn, TransferSpeedColumn, TimeRemainingColumn, MofNCompleteColumn, ProgressColumn, Task
 from ..utils import LoggerHandle, AudioLinkTester, SongInfo, SongInfoUtils, HLSDownloader, IOUtils, usedownloadheaderscookies, usesearchheaderscookies, useparseheaderscookies, cookies2dict, cookies2string, optionalimport, optionalimportfrom
+
+
+'''BaseMusicClientKwargs'''
+class BaseMusicClientKwargs(TypedDict, total=False):
+    search_size_per_source: int
+    auto_set_proxies: bool
+    random_update_ua: bool
+    enable_search_curl_cffi: bool
+    enable_parse_curl_cffi: bool
+    enable_download_curl_cffi: bool
+    maintain_session: bool
+    logger_handle: LoggerHandle
+    disable_print: bool
+    work_dir: str
+    max_retries: int
+    freeproxy_settings: dict
+    default_search_cookies: dict | str
+    default_download_cookies: dict | str
+    default_parse_cookies: dict | str
+    strict_limit_search_size_per_page: bool
+    search_size_per_page: int
+    quark_parser_config: dict
 
 
 '''AudioAwareColumn'''
@@ -143,7 +165,7 @@ class BaseMusicClient():
                 main_process_context.update(main_progress_id, description=f"Search From Sources >>> Completed ({int(main_process_context.tasks[main_progress_id].completed)}/{cur_total + len(search_urls)}) Search URLs")
         submitted_tasks = []; song_infos: dict[str, list[SongInfo]] = {}
         with ThreadPoolExecutor(max_workers=num_threadings) as pool:
-            for search_url_idx, search_url in enumerate(search_urls): song_infos[str(search_url_idx)] = []; submitted_tasks.append(pool.submit(self._search, keyword, search_url, request_overrides, song_infos[str(search_url_idx)], main_process_context, progress_id))
+            for search_url_idx, search_url in enumerate(search_urls): song_infos[str(search_url_idx)] = []; submitted_tasks.append(pool.submit(self._search, keyword, search_url, request_overrides, song_infos[str(search_url_idx)], main_process_context))
             for future in as_completed(submitted_tasks):
                 future.result()
                 with main_progress_lock:
